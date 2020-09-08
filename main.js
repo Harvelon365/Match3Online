@@ -4,6 +4,7 @@ var grid = [];
 var matches = [];
 var row;
 var col;
+var tiles;
 
 function checkMatchInitial(i,j,num){
     if (i - 1 >= 0 && i - 1 < grid.length && i - 2 >= 0 && i - 2 < grid.length){
@@ -84,7 +85,8 @@ function updateBoard(){
         for (j = 0; j < width; j++){
             row = i;
             col = j;
-            document.getElementById("row"+i).innerHTML += '<td class="tile" id="col'+j+'"><img id="'+row.toString()+col.toString()+'" src="images/'+grid[i][j]+'.png" onclick="move('+row+','+col+');"></td>';
+            document.getElementById("row"+i).innerHTML += '<td class="tile" id="col'+j+'"><img id="'+row.toString()+col.toString()+'" src="images/'+grid[i][j]+'.png"></td>';
+            
         }
     }
 }
